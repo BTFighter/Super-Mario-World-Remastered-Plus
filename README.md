@@ -1,12 +1,11 @@
 <img width="784" height="364" alt="Logo" src="https://github.com/user-attachments/assets/46e03cf3-a666-408b-80e6-1f30a18ad440" />
 
 
+### Linux and MacOS are untested.
+This is a fork of Super Mario World Remastered Plus that adds personal changes to the game.
 
-This is a fork of Super Mario World Remastered that adds some extra stuff to the game
 
-
-
-### Download: https://github.com/Boswer811/Super-Mario-World-Remastered-Plus/releases
+### Download: https://github.com/BTFighter/Super-Mario-World-Remastered-Plus/releases
 
 
 
@@ -16,9 +15,15 @@ This is a fork of Super Mario World Remastered that adds some extra stuff to the
 
 # This does NOT act as a replacement for the original Super Mario World. Super Mario World can be played on Nintendo Switch, through Nintendo Switch Online
 
+## Personal Changes/Features
 
+- Added "Lives System" feature.
+    - Classic: No changes.
+    - Mario Maker: All players need to be dead to lose a life. (COOP Only)
 
-## Features
+- ROMS can now be loaded in the game folder. ROMS in %APPDATA% still work.
+
+## SMWR+ Features
 
 - Added option to swim faster when holding run button
 
@@ -38,10 +43,6 @@ This is a fork of Super Mario World Remastered that adds some extra stuff to the
 
 
 
-## Downloading
-
-
-
 ### Windows/Linux
 
 1. Go to the 'Releases' page
@@ -57,6 +58,7 @@ This is a fork of Super Mario World Remastered that adds some extra stuff to the
 
 
 ### You are more than welcome to fork the repository and release new content / fixes as you wish.
+
 
 
 
