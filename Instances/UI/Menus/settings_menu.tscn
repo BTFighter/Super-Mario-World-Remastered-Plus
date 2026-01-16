@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://8uyqq4rf0cl1"]
 
-[ext_resource type="Texture2D" uid="uid://brpkusquyfnyu" path="res://Assets/Sprites/UI/MainBG.png" id="1_mplar"]
 [ext_resource type="Script" uid="uid://c0cjtqsi4ln15" path="res://Scripts/UI/settings_menu.gd" id="1_nelhb"]
+[ext_resource type="Texture2D" uid="uid://gqv4p5bghklh" path="res://Assets/Sprites/UI/SettingsBG.png" id="2_g8p0s"]
 [ext_resource type="Texture2D" uid="uid://d2g1m7wul4xs3" path="res://Assets/Sprites/UI/TitleBorder.png" id="3_55l6k"]
 [ext_resource type="Texture2D" uid="uid://vmnatqkj2lio" path="res://Assets/Sprites/UI/Arrow.png" id="5_skx6t"]
 [ext_resource type="PackedScene" uid="uid://cxa60on04noyg" path="res://Instances/UI/audio_settings.tscn" id="6_f8yi7"]
@@ -46,7 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_mplar")
+texture = ExtResource("2_g8p0s")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
@@ -144,3 +144,39 @@ uppercase = true
 stream = ExtResource("12_g8p0s")
 autoplay = true
 bus = &"Music"
+
+[node name="Label3" type="Label" parent="."]
+z_index = -1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -470.0
+offset_top = -269.0
+offset_right = -166.0
+offset_bottom = -255.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("11_hsiay")
+text = "SMWR Created by JoeMama"
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label4" type="Label" parent="."]
+z_index = -1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -269.0
+offset_right = 126.0
+offset_bottom = -255.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("11_hsiay")
+text = "Mod created by Boswer"
+vertical_alignment = 1
+uppercase = true

@@ -108,7 +108,7 @@ func _process(delta: float) -> void:
 	if map_path.curve != null:
 		path_animation.speed_scale = (move_speed / map_path.curve.get_baked_length())
 		if running:
-			path_animation.speed_scale *= 2
+			path_animation.speed_scale *= 3
 	if active_point != null:
 		if active_point.point_type == "Move" and can_move:
 			auto_move()

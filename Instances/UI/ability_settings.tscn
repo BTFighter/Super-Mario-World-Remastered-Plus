@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxn7al8iu8ux"]
 
-[ext_resource type="Script" path="res://Scripts/UI/settings_section.gd" id="1_enxh4"]
+[ext_resource type="Script" uid="uid://cslnfaq5altid" path="res://Scripts/UI/settings_section.gd" id="1_enxh4"]
 [ext_resource type="PackedScene" uid="uid://den5kogms88pd" path="res://Instances/UI/selectable_option_node.tscn" id="2_q4ake"]
 
 [node name="AbilitySettings" type="ScrollContainer" node_paths=PackedStringArray("option_nodes")]
@@ -71,3 +71,17 @@ node_title = "Coyote Time"
 selectable_values = [false, true]
 value_colours = Array[Color]([Color(1, 0, 0.270588, 1), Color(0.231373, 1, 0, 1)])
 settings_value = "coyote_time"
+
+[node name="FastSwim" parent="VBoxContainer" instance=ExtResource("2_q4ake")]
+layout_mode = 2
+node_title = "Fast Swimming"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0, 0.270588, 1), Color(0.231373, 1, 0, 1)])
+settings_value = "fast_swim_accel"
+
+[node name="FastClimb" parent="VBoxContainer" instance=ExtResource("2_q4ake")]
+layout_mode = 2
+node_title = "Faster Climbing"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0, 0.270588, 1), Color(0.231373, 1, 0, 1)])
+settings_value = "fast_climb"

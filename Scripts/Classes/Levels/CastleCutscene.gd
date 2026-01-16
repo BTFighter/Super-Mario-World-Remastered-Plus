@@ -31,3 +31,9 @@ func finish() -> void:
 	SaveManager.current_save.eggs_rescued[egg_index] = true
 	print(SaveManager.current_save)
 	TransitionManager.transition_to_map(GameManager.current_map_path, self, true)
+	
+func _process(delta: float) -> void:
+	SaveManager.current_save.eggs_rescued[egg_index] = true
+	print(SaveManager.current_save)
+	if Input.is_action_just_pressed("ui_accept"):
+		TransitionManager.transition_to_map(GameManager.current_map_path, self, true)

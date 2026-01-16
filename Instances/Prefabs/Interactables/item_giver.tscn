@@ -1,11 +1,11 @@
 [gd_scene load_steps=23 format=3 uid="uid://b3bv5d6f7y4rw"]
 
-[ext_resource type="Script" path="res://Scripts/Interactables/item_giver.gd" id="1_uentp"]
+[ext_resource type="Script" uid="uid://csegs6lf711b7" path="res://Scripts/Interactables/item_giver.gd" id="1_uentp"]
 [ext_resource type="Texture2D" uid="uid://cua8n6buq7off" path="res://Assets/Sprites/Objects/ItemGiverBase.png" id="1_wycru"]
 [ext_resource type="Resource" uid="uid://b8cl3invnv0aj" path="res://Resources/PlayerPowerUpState/Big.tres" id="2_22s5a"]
 [ext_resource type="Texture2D" uid="uid://bgerhpivn3hsm" path="res://Assets/Sprites/Items/Mushroom.png" id="2_bhpql"]
 [ext_resource type="Texture2D" uid="uid://bki3y2ufqlbul" path="res://Assets/Sprites/Particles/HologramMask.png" id="2_iy312"]
-[ext_resource type="Script" path="res://Scripts/Classes/Blocks/BlockClass.gd" id="5_d77le"]
+[ext_resource type="Script" uid="uid://do7lnrfojsd5g" path="res://Scripts/Classes/Blocks/BlockClass.gd" id="5_d77le"]
 [ext_resource type="Texture2D" uid="uid://dhb570bi4rwm6" path="res://Assets/Sprites/Objects/ArrowBlocks.png" id="6_8ees6"]
 [ext_resource type="FontFile" uid="uid://bhqyq3yxbvqkd" path="res://Assets/Sprites/UI/HUD/HUDFont.png" id="7_3akcd"]
 
@@ -42,8 +42,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vnmre"]
 _data = {
-"RESET": SubResource("Animation_ysc2m"),
-"new_animation": SubResource("Animation_nnrh7")
+&"RESET": SubResource("Animation_ysc2m"),
+&"new_animation": SubResource("Animation_nnrh7")
 }
 
 [sub_resource type="Curve" id="Curve_13dcc"]
@@ -105,8 +105,8 @@ shader_parameter/baseColor = Color(0.305882, 0.835294, 0.960784, 0.752941)
 shader_parameter/speed = 64.0
 shader_parameter/linesColor = Color(0.631373, 0.909804, 0.556863, 0.509804)
 shader_parameter/linesColorIntensity = -0.005
-shader_parameter/hologramTextureTiling = Vector2(4, 4)
 shader_parameter/hologramTexture = ExtResource("2_iy312")
+shader_parameter/hologramTextureTiling = Vector2(4, 4)
 
 [sub_resource type="Animation" id="Animation_hwvjx"]
 length = 0.001
@@ -169,9 +169,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vneel"]
 _data = {
-"RESET": SubResource("Animation_hwvjx"),
-"Take": SubResource("Animation_tlasn"),
-"new_animation": SubResource("Animation_byrjg")
+&"RESET": SubResource("Animation_hwvjx"),
+&"Take": SubResource("Animation_tlasn"),
+&"new_animation": SubResource("Animation_byrjg")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvoip"]
@@ -191,7 +191,7 @@ flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Base"]
 libraries = {
-"": SubResource("AnimationLibrary_vnmre")
+&"": SubResource("AnimationLibrary_vnmre")
 }
 autoplay = "new_animation"
 speed_scale = 10.0
@@ -209,8 +209,8 @@ modulate = Color(0.462745, 1, 1, 1)
 z_index = -1
 position = Vector2(0, -3)
 amount = 32
-process_material = SubResource("ParticleProcessMaterial_02fqn")
 lifetime = 1.5
+process_material = SubResource("ParticleProcessMaterial_02fqn")
 
 [node name="ItemPreview" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_opdb7")
@@ -219,7 +219,7 @@ texture = ExtResource("2_bhpql")
 
 [node name="Animation" type="AnimationPlayer" parent="ItemPreview"]
 libraries = {
-"": SubResource("AnimationLibrary_vneel")
+&"": SubResource("AnimationLibrary_vneel")
 }
 autoplay = "new_animation"
 

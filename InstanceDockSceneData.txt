@@ -45,10 +45,10 @@
 &"custom_texture": "res://Assets/Sprites/Editor/CoinSnake.png",
 &"scene": "res://Instances/Prefabs/Items/coin_snake.tscn"
 }, {
-&"scene": "res://Instances/Prefabs/Items/yoshi_wings.tscn"
-}, {
 &"custom_texture": "res://Assets/Sprites/Items/3UpMoon.png",
 &"scene": "res://Instances/Prefabs/Items/3_up_moon.tscn"
+}, {
+&"scene": "res://Instances/Prefabs/Items/yoshi_wings.tscn"
 }]
 }, {
 "name": "Objects",
@@ -250,28 +250,28 @@
 }, {
 "name": "Misc",
 "scenes": [{
-"custom_texture": "res://Assets/Sprites/Objects/Water/Water1.png",
-"scene": "res://Instances/Prefabs/Interactables/water.tscn"
+&"custom_texture": "res://Assets/Sprites/Objects/Water/Water1.png",
+&"scene": "res://Instances/Prefabs/Interactables/water.tscn"
 }, {
-"custom_texture": "res://Assets/Sprites/Objects/Door.png",
-"scene": "res://Instances/Prefabs/Interactables/door.tscn"
+&"custom_texture": "res://Assets/Sprites/Objects/Door.png",
+&"scene": "res://Instances/Prefabs/Interactables/door.tscn"
 }, {
-"custom_texture": "res://Assets/Sprites/Editor/PipeIcon.png",
-"scene": "res://Instances/Prefabs/Interactables/pipe_area.tscn"
+&"custom_texture": "res://Assets/Sprites/Editor/PipeIcon.png",
+&"scene": "res://Instances/Prefabs/Interactables/pipe_area.tscn"
 }, {
-"custom_texture": "res://Assets/Sprites/Editor/PipeToPipeIcon.png",
-"scene": "res://Instances/Prefabs/Interactables/pipe_to_pipe_area.tscn"
+&"custom_texture": "res://Assets/Sprites/Editor/PipeToPipeIcon.png",
+&"scene": "res://Instances/Prefabs/Interactables/pipe_to_pipe_area.tscn"
 }, {
-"scene": "res://Instances/Prefabs/checkpoint_gate.tscn"
+&"scene": "res://Instances/Prefabs/checkpoint_gate.tscn"
 }, {
-"custom_texture": "res://Assets/Sprites/Objects/Keyhole.png",
-"scene": "res://Instances/Prefabs/key_hole.tscn"
+&"custom_texture": "res://Assets/Sprites/Objects/Keyhole.png",
+&"scene": "res://Instances/Prefabs/key_hole.tscn"
 }, {
-"custom_texture": "res://Assets/Sprites/Objects/CheckpointFlagEmpty.png",
-"scene": "res://Instances/Prefabs/Interactables/checkpoint_flag.tscn"
+&"custom_texture": "res://Assets/Sprites/Objects/CheckpointFlagEmpty.png",
+&"scene": "res://Instances/Prefabs/Interactables/checkpoint_flag.tscn"
 }, {
-"scene": "res://Instances/Prefabs/goal_post.tscn"
+&"scene": "res://Instances/Prefabs/goal_post.tscn"
 }, {
-"scene": "res://Instances/Prefabs/end_flag_pole.tscn"
+&"scene": "res://Instances/Prefabs/end_flag_pole.tscn"
 }]
 }]

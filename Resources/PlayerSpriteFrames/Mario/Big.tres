@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=126 format=3 uid="uid://cnc3o8atdv6eo"]
+[gd_resource type="SpriteFrames" load_steps=126 format=3 uid="uid://c5i21sd6ul0ht"]
 
 [ext_resource type="Texture2D" uid="uid://bkijsn7ydik4h" path="res://Assets/Sprites/Characters/Mario/MarioFlyingSheet.png" id="1_r5raw"]
 [ext_resource type="Texture2D" uid="uid://b0px7xn2h3jc2" path="res://Assets/Sprites/Characters/Mario/Big.png" id="1_w6wqh"]

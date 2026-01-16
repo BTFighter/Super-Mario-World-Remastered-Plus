@@ -29,11 +29,11 @@ func activate_switch() -> void:
 	pressed.emit()
 	SoundManager.play_sfx(SoundManager.switch_activate, self)
 	SoundManager.play_sfx(SoundManager.bullet, self)
-	GameManager.show_message(message, 8)
+	GameManager.show_message(message, 0)
 	MusicPlayer.play_course_clear_fanfare()
 	GameManager.colours_enabled[switch_colour] = true
 	if GameManager.colours_enabled.any(func(val): return val == false) == false:
 		all_switches_pressed.emit()
 	await GameManager.message_closed
+	MusicPlayer.stop_level_music()
 	TransitionManager.transition_to_map(GameManager.current_map_path, GameManager.current_level, true)
-	

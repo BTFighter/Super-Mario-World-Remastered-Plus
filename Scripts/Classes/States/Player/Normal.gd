@@ -414,7 +414,7 @@ func handle_yoshi() -> void:
 		player.yoshi_use_tongue()
 
 func handle_p_meter() -> void:
-	if abs(player.velocity.x) >= (run_speed * move_speed_modifiers[physics_style]) and Input.is_action_pressed(CoopManager.get_player_input_str("run", player.player_id)) and player.is_on_floor():
+	if abs(player.velocity.x) >= (run_speed) and Input.is_action_pressed(CoopManager.get_player_input_str("run", player.player_id)) and player.is_on_floor():
 		player.p_meter += 2
 	else:
 		if not player.is_on_floor():

@@ -224,7 +224,7 @@ func unlock_path(path, route, animate := true, direction := unlock_route_directi
 					SoundManager.play_sfx(SoundManager.map_unlock_loop, i)
 				else:
 					SoundManager.play_sfx(SoundManager.map_unlock, i)
-				await get_tree().create_timer(route.unlock_speed, false).timeout
+				if SettingsManager.settings_file.fast_map_unlock_speed == false: await get_tree().create_timer(route.unlock_speed, false).timeout
 		if get_node(route.destination_point).level_unlocked == false:
 			SoundManager.play_sfx(SoundManager.coin, self)
 			ParticleManager.summon_particle(ParticleManager.GLEAM, get_node(route.destination_point).global_position)

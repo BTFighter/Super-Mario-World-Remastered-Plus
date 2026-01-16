@@ -1,5 +1,4 @@
 extends Node
-
 @export var path: Path2D = null
 @export var scroll_speed := 5.0
 
@@ -14,12 +13,14 @@ func _exit_tree() -> void:
 	GameManager.autoscrolling = false
 
 func _ready() -> void:
+	if SettingsManager.settings_file.disable_auto_scroll == true:
+		process_mode = Node.PROCESS_MODE_DISABLED
 	GameManager.autoscrolling = true
 	path_node.curve = path.curve.duplicate()
 	follow_joint.progress_ratio = 0
 	await get_tree().physics_frame
 	walls.set_collision_layer_value(1, true)
-	get_viewport().get_camera_2d().enabled = false
+
 	
 	camera.enabled = true
 	await get_tree().create_timer(1).timeout

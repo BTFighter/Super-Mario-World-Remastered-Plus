@@ -13,7 +13,7 @@ func spawn() -> void:
 	GameManager.can_pause = false
 
 func _on_timer_timeout() -> void:
-	GameManager.show_message(preload(\"res://Assets/Sprites/UI/Messages/Opening.png\"), 14)
+	GameManager.show_message(preload(\"res://Assets/Sprites/UI/Messages/Opening.png\"), 0)
 	await GameManager.message_closed
 	TransitionManager.transition_to_map(GameManager.current_map_path, self)
 

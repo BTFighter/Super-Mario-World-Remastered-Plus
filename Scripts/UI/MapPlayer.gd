@@ -256,7 +256,7 @@ func level_enter() -> void:
 	enter_level.emit()
 
 func auto_pause() -> void:
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.4).timeout
 	if not menu_open:
 		pause.emit()
 

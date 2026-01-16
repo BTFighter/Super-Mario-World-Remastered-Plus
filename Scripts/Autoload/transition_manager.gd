@@ -65,12 +65,14 @@ func _process(delta: float) -> void:
 		loading_icon.position.x = lerpf(loading_icon.position.x, lerpf(0, 480 * 2, progress[0]), delta * 5)
 
 func show_level_start() -> void:
-	await get_tree().create_timer(0.5).timeout
-	level_start.show()
-	await get_tree().create_timer(1).timeout
-	level_start.hide()
-	await get_tree().create_timer(0.5).timeout
+	if SettingsManager.settings_file.show_level_start_text == true:
+		await get_tree().create_timer(0.5).timeout
+		level_start.show()
+		await get_tree().create_timer(1).timeout
+		level_start.hide()
+		await get_tree().create_timer(0.5).timeout
 	return
+
 
 func pipe_transition_to_level(level: String, old, id, save := true) -> void:
 	changing_scene = true

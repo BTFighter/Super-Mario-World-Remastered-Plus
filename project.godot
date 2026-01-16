@@ -20,22 +20,22 @@ warnings/check_angle_interpolation_type_conflicting=false
 
 [application]
 
-config/name="SuperMarioWorldRemastered"
+config/name="SuperMarioWorldRemasteredPlus"
 config/tags=PackedStringArray("die")
 run/main_scene="uid://dvbp0nouhoin8"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SuperMarioWorldRemastered"
 config/features=PackedStringArray("4.4")
 boot_splash/show_image=false
-boot_splash/image="res://Assets/Sprites/UI/Splash.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icon.png"
+boot_splash/image="res://Assets/Sprites/UI/Splash.png"
+config/icon="uid://3pgeyxvjbjjm"
 
 [autoload]
 
 GameManager="*res://Instances/Autoloads/game_manager.tscn"
-TransitionManager="*res://Instances/Autoloads/transition_manager.tscn"
+TransitionManager="*res://Scripts/Autoload/transition_manager.tscn"
 MusicPlayer="*res://Instances/Autoloads/music_player.tscn"
 SoundManager="*res://Scripts/Autoload/SoundManager.gd"
 SaveManager="*res://Scripts/Autoload/SaveManager.gd"

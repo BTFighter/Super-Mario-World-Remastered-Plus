@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dsi7hx88qsxq1"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Items/MushroomItem.gd" id="1_yx73k"]
+[ext_resource type="Script" uid="uid://dk14hw1j2tvuu" path="res://Scripts/Classes/Items/MushroomItem.gd" id="1_yx73k"]
 [ext_resource type="Resource" uid="uid://b8cl3invnv0aj" path="res://Resources/PlayerPowerUpState/Big.tres" id="2_aadsu"]
 [ext_resource type="Texture2D" uid="uid://bgerhpivn3hsm" path="res://Assets/Sprites/Items/Mushroom.png" id="3_e3qad"]
-[ext_resource type="Script" path="res://Scripts/Classes/water_bouyancy.gd" id="4_0vdig"]
+[ext_resource type="Script" uid="uid://cib3wkgoiw57u" path="res://Scripts/Classes/water_bouyancy.gd" id="4_0vdig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mu12l"]
 size = Vector2(8, 8)

@@ -190,7 +190,7 @@ offset_top = -53.0
 offset_right = 107.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("11_4nfqw")
-text = "V 1.0.1
+text = "V 1.1
 "
 vertical_alignment = 1
 uppercase = true

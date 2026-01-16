@@ -94,6 +94,9 @@ func handle_climbing(delta: float) -> void:
 	else:
 		player.velocity = Vector2.ZERO
 
+	if SettingsManager.settings_file.fast_climb == true:
+		player.velocity = (climb_direction.normalized() * (player.fast_climb_sprint if Input.is_action_pressed(CoopManager.get_player_input_str("run", player.player_id)) else player.fast_climb_speed))
+
 func handle_turning(delta: float) -> void:
 	player.velocity = Vector2.ZERO
 

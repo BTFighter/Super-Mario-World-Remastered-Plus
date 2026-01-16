@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://2ft60thfg673"]
+[gd_scene load_steps=9 format=3 uid="uid://2ft60thfg673"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/LevelClass.gd" id="1_ep6p0"]
+[ext_resource type="Script" uid="uid://k72dmo2yqq6n" path="res://Scripts/Classes/LevelClass.gd" id="1_ep6p0"]
 [ext_resource type="AudioStream" uid="uid://jyjpswb5b2wv" path="res://Resources/MusicTracks/Bonus.tres" id="2_dng7m"]
 [ext_resource type="PackedScene" uid="uid://cqw1qs0bt5s4o" path="res://Instances/Prefabs/Player.tscn" id="3_up44a"]
 [ext_resource type="PackedScene" uid="uid://dwavjbyw0v12l" path="res://Instances/Prefabs/tile_map.tscn" id="4_wwqwj"]
-[ext_resource type="Texture2D" uid="uid://cfylm1x24j87u" path="res://Assets/LevelGuides/Level 0E6.png" id="5_le7dm"]
 [ext_resource type="PackedScene" uid="uid://dfw1qkipfwo1h" path="res://Instances/Prefabs/Blocks/bonus_game_blocks.tscn" id="6_10557"]
 [ext_resource type="PackedScene" uid="uid://cly5f6jt1cd28" path="res://Instances/Prefabs/Interactables/pipe_area.tscn" id="7_biaik"]
 
-[sub_resource type="Shader" id="Shader_1xk88"]
+[sub_resource type="Shader" id="Shader_utivr"]
 code = "// HSV to RBG from https://www.rapidtables.com/convert/color/hsv-to-rgb.html
 // Rotation matrix from https://en.wikipedia.org/wiki/Rotation_matrix
 
@@ -43,7 +42,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nput5"]
 resource_local_to_scene = true
-shader = SubResource("Shader_1xk88")
+shader = SubResource("Shader_utivr")
 shader_parameter/strength = 0.0
 shader_parameter/speed = 0.5
 shader_parameter/angle = 36.404
@@ -67,7 +66,6 @@ layer_1/tile_data = PackedInt32Array(-1507331, 17, 6, -1441795, 17, 6, -1376259,
 visible = false
 modulate = Color(0.411765, 0.411765, 0.411765, 1)
 position = Vector2(48, -384)
-texture = ExtResource("5_le7dm")
 centered = false
 
 [node name="BonusGameBlocks" parent="." instance=ExtResource("6_10557")]

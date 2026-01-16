@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ci8iu5e3ok55v"]
 
-[ext_resource type="Script" path="res://Scripts/UI/disclaimer.gd" id="1_8m6sj"]
+[ext_resource type="Script" uid="uid://6a5l1a24ke78" path="res://Scripts/UI/disclaimer.gd" id="1_8m6sj"]
 [ext_resource type="FontFile" uid="uid://battfdcbkb2by" path="res://Assets/Sprites/UI/HUD/HudFontOutline.png" id="1_qdnyv"]
 [ext_resource type="FontFile" uid="uid://bhqyq3yxbvqkd" path="res://Assets/Sprites/UI/HUD/HUDFont.png" id="2_1hwb0"]
 
@@ -78,8 +78,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mv43n"]
 _data = {
-"Enter": SubResource("Animation_2tn4e"),
-"RESET": SubResource("Animation_7u5ju")
+&"Enter": SubResource("Animation_2tn4e"),
+&"RESET": SubResource("Animation_7u5ju")
 }
 
 [node name="Disclaimer" type="ColorRect"]
@@ -111,16 +111,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 48.0
-offset_right = -16.0
-offset_bottom = -6.0
+offset_left = 69.0
+offset_top = 81.5
+offset_right = 37.0
+offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1hwb0")
-text = "\"Super Mario World Remastered\" is a not-for-profit fangame, and should never ever be sold.
+text = "\"Super Mario World Remastered PLUS\" is a not-for-profit fangame, and should never ever be sold.
 
-It does not serve as a substitute to playing the original Super Mario World.
+It does not serve as a replacement to playing the original Super Mario World.
 
 Super Mario World can be played now on Nintendo Switch through Nintendo Switch Online.
 
@@ -133,6 +133,6 @@ uppercase = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_mv43n")
+&"": SubResource("AnimationLibrary_mv43n")
 }
 autoplay = "Enter"

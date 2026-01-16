@@ -18,7 +18,13 @@ var selected_value = null
 func update(delta: float) -> void:
 	arrow.visible = highlighted
 	title.text = "  " + node_title + ":"
-	value.text = str(selectable_values[selected_index])
+	if settings_value == "modified_life_decrement":
+		if selectable_values[selected_index] == false:
+			value.text = "Original"
+		else:
+			value.text = "Mario Maker"
+	else:
+		value.text = str(selectable_values[selected_index])
 	left.modulate.a = 1 if highlighted and selected_index > 0 else 0
 	if value_colours.is_empty() == false:
 		if value_colours[selected_index] != null:

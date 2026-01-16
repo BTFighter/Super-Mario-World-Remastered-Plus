@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://oeiqvupa2v30"]
 
-[ext_resource type="Script" path="res://Scripts/UI/settings_section.gd" id="1_1a2tb"]
+[ext_resource type="Script" uid="uid://cslnfaq5altid" path="res://Scripts/UI/settings_section.gd" id="1_1a2tb"]
 [ext_resource type="PackedScene" uid="uid://den5kogms88pd" path="res://Instances/UI/selectable_option_node.tscn" id="2_xgdys"]
 
 [node name="GameplaySettings" type="ScrollContainer" node_paths=PackedStringArray("option_nodes")]
@@ -14,13 +14,20 @@ grow_vertical = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = ExtResource("1_1a2tb")
-option_nodes = [NodePath("VBoxContainer/LevelLayout"), null, null, NodePath("VBoxContainer/AutumnStyle"), NodePath("VBoxContainer/CharacterPhysics")]
+option_nodes = [NodePath("VBoxContainer/LevelLayout"), null, null, NodePath("VBoxContainer/AutumnStyle"), NodePath("VBoxContainer/CharacterPhysics"), NodePath("VBoxContainer/LivesSystem")]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = -4
+
+[node name="LivesSystem" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
+layout_mode = 2
+node_title = "Lives System"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 1, 1, 1), Color(0.893104, 0.847036, 0, 1)])
+settings_value = "modified_life_decrement"
 
 [node name="LevelLayout" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
 layout_mode = 2
@@ -29,6 +36,13 @@ option_value_usage = 1
 selectable_values = ["SNES", "GBA"]
 value_colours = Array[Color]([Color(1, 0, 0.270588, 1), Color(0.462745, 0.427451, 0.647059, 1)])
 settings_value = "level_layout_type"
+
+[node name="DisableAutoScroll" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
+layout_mode = 2
+node_title = "Disable auto scroll"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
+settings_value = "disable_auto_scroll"
 
 [node name="TimerEnabled" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
 layout_mode = 2
@@ -81,6 +95,13 @@ selectable_values = [false, true]
 value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
 settings_value = "yoshi_spawn_pause"
 
+[node name="MapUnlockSpeed" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
+layout_mode = 2
+node_title = "Faster Map Unlock Speed"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
+settings_value = "fast_map_unlock_speed"
+
 [node name="EdibleDolphins" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
 layout_mode = 2
 node_title = "Edible Dolphins"
@@ -101,3 +122,10 @@ node_title = "Auto Reserve Item Drop"
 selectable_values = [false, true]
 value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
 settings_value = "auto_item_drop"
+
+[node name="ShowLevelStartText" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
+layout_mode = 2
+node_title = "Show Level Start Text"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
+settings_value = "show_level_start_text"

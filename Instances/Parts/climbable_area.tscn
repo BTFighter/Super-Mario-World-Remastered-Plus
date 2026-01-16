@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnv6i6byojhnq"]
 
-[ext_resource type="Script" path="res://Scripts/vine.gd" id="1_4m7ac"]
+[ext_resource type="Script" uid="uid://d1njg76juy338" path="res://Scripts/vine.gd" id="1_4m7ac"]
 
 [node name="ClimbableArea" type="Area2D"]
 script = ExtResource("1_4m7ac")

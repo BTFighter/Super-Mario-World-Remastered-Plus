@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://den5kogms88pd"]
 
-[ext_resource type="Script" path="res://Scripts/UI/selectable_option_node.gd" id="1_p7qgv"]
+[ext_resource type="Script" uid="uid://brm4excvgj3l0" path="res://Scripts/UI/selectable_option_node.gd" id="1_p7qgv"]
 [ext_resource type="Texture2D" uid="uid://vmnatqkj2lio" path="res://Assets/Sprites/UI/Arrow.png" id="3_mwwil"]
 [ext_resource type="FontFile" uid="uid://bhqyq3yxbvqkd" path="res://Assets/Sprites/UI/HUD/HUDFont.png" id="3_proyl"]
 
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dtw70"]
 _data = {
-"Flash": SubResource("Animation_451ts"),
-"RESET": SubResource("Animation_s2bjd")
+&"Flash": SubResource("Animation_451ts"),
+&"RESET": SubResource("Animation_s2bjd")
 }
 
 [node name="SelectableOptionNode" type="Control" node_paths=PackedStringArray("title")]
@@ -74,7 +74,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Animation" type="AnimationPlayer" parent="MarginContainer/Arrow"]
 libraries = {
-"": SubResource("AnimationLibrary_dtw70")
+&"": SubResource("AnimationLibrary_dtw70")
 }
 autoplay = "Flash"
 

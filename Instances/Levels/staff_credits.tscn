@@ -134,12 +134,12 @@ shader_parameter/og_1 = Color(1, 0, 0.831373, 1)
 shader_parameter/og_2 = Color(0.760784, 0, 0.631373, 1)
 shader_parameter/og_3 = Color(0.478431, 0, 0.4, 1)
 shader_parameter/og_arm = Color(1, 1, 0, 1)
-shader_parameter/og_arm_2 = null
+shader_parameter/og_arm_2 = Color(0, 0, 0, 1)
 shader_parameter/colour_1 = Color(0.533333, 0.533333, 0.972549, 1)
 shader_parameter/colour_2 = Color(0.407843, 0.407843, 0.847059, 1)
 shader_parameter/colour_3 = Color(0.25098, 0.25098, 0.847059, 1)
 shader_parameter/arm_colour = Color(0.533333, 0.533333, 0.972549, 1)
-shader_parameter/arm_2_colour = null
+shader_parameter/arm_2_colour = Color(0, 0, 0, 1)
 shader_parameter/alpha = 1.0
 shader_parameter/epsilon = 0.001
 
@@ -2435,6 +2435,11 @@ credits = "--Super Mario World Remastered
 
 --Created by
 KyzanDEV
+
+
+--Mod by
+
+
 
 
 --Mario, Luigi, Toad, Toadette Sprites

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvprr1nf81boe"]
 
 [ext_resource type="PackedScene" uid="uid://den5kogms88pd" path="res://Instances/UI/selectable_option_node.tscn" id="1_ofls0"]
-[ext_resource type="Script" path="res://Scripts/UI/settings_section.gd" id="1_r8x5s"]
+[ext_resource type="Script" uid="uid://cslnfaq5altid" path="res://Scripts/UI/settings_section.gd" id="1_r8x5s"]
 
 [node name="DisplaySettings" type="ScrollContainer" node_paths=PackedStringArray("option_nodes")]
 anchors_preset = -1

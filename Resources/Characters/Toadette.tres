@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cqw1qs0bt5s4o" path="res://Instances/Prefabs/Player.tscn" id="3_hfoq4"]
 [ext_resource type="Texture2D" uid="uid://dlinb6jufnotu" path="res://Assets/Sprites/Characters/Toadette/FireworkMask.png" id="4_5rqc8"]
 [ext_resource type="Texture2D" uid="uid://b4euj3sb66whn" path="res://Assets/Sprites/Characters/Toadette/Ending.png" id="4_s5c4y"]
-[ext_resource type="Script" path="res://Scripts/Classes/Resources/CharacterResource.gd" id="6_e6y0j"]
+[ext_resource type="Script" uid="uid://bnrkbpmp03s5q" path="res://Scripts/Classes/Resources/CharacterResource.gd" id="6_e6y0j"]
 [ext_resource type="SpriteFrames" uid="uid://vrlvkv61myoo" path="res://Resources/PlayerSpriteFrames/Toadette/Map.tres" id="6_rskiu"]
 [ext_resource type="Texture2D" uid="uid://bv8jqnokgtk6d" path="res://Assets/Sprites/Characters/Toadette/Big.png" id="7_qmfq4"]
 [ext_resource type="AudioStream" uid="uid://c5t4v2hmyvxw1" path="res://Assets/Audio/SFX/coin.wav" id="9_1qmqv"]

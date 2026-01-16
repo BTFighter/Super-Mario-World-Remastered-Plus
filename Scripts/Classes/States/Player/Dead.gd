@@ -61,7 +61,7 @@ func end_dead(decrement_life := true) -> void:
 	await get_tree().create_timer(2.5).timeout
 	player.set_power_state(player.small_power_state)
 	await get_tree().physics_frame
-	if GameManager.lives > 1:
+	if GameManager.lives > 1 :
 		if GameManager.inf_lives == false and decrement_life:
 			GameManager.lives -= 1
 		if GameManager.time <= 0:
@@ -73,7 +73,7 @@ func end_dead(decrement_life := true) -> void:
 
 func multi_dead(decrement_life := true) -> void:
 	player.play_global_sfx("fast_death")
-	if GameManager.inf_lives == false and decrement_life:
+	if GameManager.inf_lives == false  and decrement_life:
 		GameManager.lives -= 1
 	await get_tree().create_timer(3).timeout
 	if GameManager.lives <= 0:

@@ -1,8 +1,10 @@
---Super Mario World Remastered
+--Super Mario World Remastered Plus
 
 --Created by
 JoeMama
 
+--Mod by
+Boswer
 
 --Sprites
 

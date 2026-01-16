@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cjj16shwexbse"]
 
-[ext_resource type="Script" path="res://Scripts/HeldObjects/silver_p_switch.gd" id="1_2xss2"]
+[ext_resource type="Script" uid="uid://cmlmya81owydi" path="res://Scripts/HeldObjects/silver_p_switch.gd" id="1_2xss2"]
 [ext_resource type="Texture2D" uid="uid://dbt4scsi4nboc" path="res://Assets/Sprites/Objects/GrayPSwitch.png" id="2_4jisi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdeh8"]

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdu26cn1b0da4" path="res://Assets/Sprites/Characters/Toad/Ending.png" id="4_0mgs7"]
 [ext_resource type="Texture2D" uid="uid://dgbo3t71wv3bn" path="res://Assets/Sprites/Characters/Toad/FireworkMask.png" id="4_gx6mu"]
 [ext_resource type="SpriteFrames" uid="uid://6ef0hopfef6p" path="res://Resources/PlayerSpriteFrames/Toad/Map.tres" id="6_34ac1"]
-[ext_resource type="Script" path="res://Scripts/Classes/Resources/CharacterResource.gd" id="6_e7w7q"]
+[ext_resource type="Script" uid="uid://bnrkbpmp03s5q" path="res://Scripts/Classes/Resources/CharacterResource.gd" id="6_e7w7q"]
 [ext_resource type="Texture2D" uid="uid://dapju4fhv02s3" path="res://Assets/Sprites/Characters/Toad/Big.png" id="7_8fgd8"]
 [ext_resource type="Resource" uid="uid://ceqaqufmindu" path="res://Resources/SoundLibraries/Default.tres" id="9_fksu1"]
 [ext_resource type="AudioStream" uid="uid://c5t4v2hmyvxw1" path="res://Assets/Audio/SFX/coin.wav" id="9_uwyqb"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2y1atyogmv0x"]
 
-[ext_resource type="Script" path="res://Scripts/UI/game_choice_menu.gd" id="1_qehyo"]
+[ext_resource type="Script" uid="uid://dnsdqamfmli1j" path="res://Scripts/UI/game_choice_menu.gd" id="1_qehyo"]
 [ext_resource type="Texture2D" uid="uid://vmnatqkj2lio" path="res://Assets/Sprites/UI/Arrow.png" id="2_fsih0"]
 [ext_resource type="FontFile" uid="uid://bhqyq3yxbvqkd" path="res://Assets/Sprites/UI/HUD/HUDFont.png" id="3_ainnq"]
 
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kh12m"]
 _data = {
-"RESET": SubResource("Animation_7rd5l"),
-"Show": SubResource("Animation_cdgv5")
+&"RESET": SubResource("Animation_7rd5l"),
+&"Show": SubResource("Animation_cdgv5")
 }
 
 [node name="GameChoice" type="Node"]
@@ -89,5 +89,5 @@ uppercase = true
 
 [node name="Animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kh12m")
+&"": SubResource("AnimationLibrary_kh12m")
 }

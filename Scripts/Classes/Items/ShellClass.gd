@@ -37,7 +37,6 @@ func physics_update(delta: float) -> void:
 		sprite.play("Idle")
 	if can_flip:
 		sprite.flip_v = flipped
-	can_destroy = moving
 	handle_movement(delta)
 	
 

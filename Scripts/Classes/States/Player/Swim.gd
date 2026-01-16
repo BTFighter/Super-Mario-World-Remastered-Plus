@@ -3,12 +3,13 @@ extends PlayerState
 var current_speed := 0
 
 const swim_speed := 60
+const fast_swim_speed := 100
 const hold_swim_speed := 120
 const swim_force := -120
 const swim_gravity := 1.875
 const swim_accel := 5.625
+const fast_swim_accel := 7.625
 const decel := 3.75
-
 const up_y_max := -180
 const neut_y_max := -90
 const down_y_max := -30
@@ -21,6 +22,7 @@ var turning := false
 var can_turn := false
 
 var swim_meter := 0.0
+
 
 func enter(_msg := {}) -> void:
 	player.velocity.y /= 2
@@ -44,6 +46,11 @@ func physics_update(delta: float) -> void:
 		handle_yoshi()
 	if player.velocity.y > 0:
 		player.can_bump = true
+		
+	if SettingsManager.settings_file.fast_swim_accel == true: if Input.is_action_pressed(CoopManager.get_player_input_str("run", player.player_id)):
+		player.velocity.x = move_toward(player.velocity.x, (fast_swim_speed * player.input_direction) + player.water_current_speed.x, fast_swim_accel)
+	else:
+		player.velocity.x = move_toward(player.velocity.x, 0 + player.water_current_speed.x, decel)
 
 func handle_swim() -> void:
 	can_turn = player.riding_yoshi
@@ -60,6 +67,7 @@ func handle_swim() -> void:
 	
 	if Input.is_action_just_pressed(CoopManager.get_player_input_str("jump", player.player_id)):
 		swim_up()
+
 
 func swim_up() -> void:
 	SoundManager.play_sfx(SoundManager.swim, player)
@@ -160,7 +168,7 @@ func handle_swim_animation() -> void:
 				player.yoshi_animations.play(player.yoshi_animation_override)
 	if player.animation_override != "":
 		player.current_animation = player.animation_override
-
+		
 func handle_hold_swim() -> void:
 	swim_meter -= 1
 	handle_hold_animations()

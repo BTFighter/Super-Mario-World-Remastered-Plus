@@ -34,7 +34,10 @@ func _process(delta: float) -> void:
 		run_check()
 
 func verify_rom() -> bool:
-	return valid_hashes.has(FileAccess.get_sha256("user://baserom.sfc"))
+	var rom_path := "user://baserom.sfc"
+	if !FileAccess.file_exists(rom_path):
+		rom_path = "res://baserom.sfc"
+	return valid_hashes.has(FileAccess.get_sha256(rom_path))
 
 func proceed() -> void:
 	TransitionManager.transition_to_menu("res://Instances/UI/Menus/disclaimer.tscn", self)

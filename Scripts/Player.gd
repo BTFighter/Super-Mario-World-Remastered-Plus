@@ -1,4 +1,5 @@
 @icon("res://Assets/Sprites/Editor/Icons/Player.png")
+
 class_name Player
 extends CharacterBody2D
 
@@ -124,6 +125,9 @@ var flags := {}
 const climb_speed := 50
 const climb_sprint := 80
 
+const fast_climb_speed := 80
+const fast_climb_sprint := 115
+
 var riding_yoshi := false#
 
 var swimming := false
@@ -241,6 +245,7 @@ var score_save := 0
 
 var cosmic_route := []
 var carrying_player: Player = null ## The player that is carrying this one!
+
 
 func _enter_tree() -> void:
 	pass
@@ -1403,7 +1408,6 @@ func run_cast_crush_check(cast: RayCast2D) -> bool:
 
 func run_crush_check(vector := Vector2.UP) -> bool:
 	return test_move(global_transform, vector)
-
 
 func crushed() -> void:
 	die(true)

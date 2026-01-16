@@ -55,7 +55,7 @@ var settings_template := {
 	"music_volume": 0.5,
 	"sfx_volume": 0.5,
 	"ui_volume": 0.5,
-	"modified_life_decrement": false, # false = classic, true = all-players-dead
+	"modified_life_decrement": true, # false = classic, true = mario-maker
 	"ground_pound": false,
 	"air_twirl": false,
 	"wall_jump": false,
@@ -72,6 +72,11 @@ var settings_template := {
 	"soundtrack_type": 0,
 	"player_damage_style": 0,
 	"coyote_time": false,
+	"fast_swim_accel": false,
+	"disable_auto_scroll": false,
+	"fast_climb": false,
+	"fast_map_unlock_speed": false,
+	"show_level_start_text": true,
 	"jump_buffer": true,
 	"sprite_settings": sprite_settings,
 	"edible_dolphins": false,
