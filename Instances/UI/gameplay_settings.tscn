@@ -29,6 +29,13 @@ selectable_values = [false, true]
 value_colours = Array[Color]([Color(1, 1, 1, 1), Color(0.893104, 0.847036, 0, 1)])
 settings_value = "modified_life_decrement"
 
+[node name="GodMode" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
+layout_mode = 2
+node_title = "God Mode"
+selectable_values = [false, true]
+value_colours = Array[Color]([Color(1, 0.194376, 0.144153, 1), Color(0.345098, 0.972549, 0.345098, 1)])
+settings_value = "god_mode"
+
 [node name="LevelLayout" parent="VBoxContainer" instance=ExtResource("2_xgdys")]
 layout_mode = 2
 node_title = "Level Layouts"

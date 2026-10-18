@@ -56,6 +56,7 @@ var settings_template := {
 	"sfx_volume": 0.5,
 	"ui_volume": 0.5,
 	"modified_life_decrement": true, # false = classic, true = mario-maker
+	"god_mode": false,
 	"ground_pound": false,
 	"air_twirl": false,
 	"wall_jump": false,

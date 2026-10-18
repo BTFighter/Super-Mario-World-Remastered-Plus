@@ -300,6 +300,7 @@ func _ready() -> void:
 		camera.limit_top = GameManager.current_level.camera_top_end_position + 16
 		if GameManager.checkpoint_level != "" and GameManager.current_level.scene_file_path == GameManager.checkpoint_level:
 			self.global_position = GameManager.checkpoint_position
+			spawn_position = GameManager.checkpoint_position
 	CoopManager.coop_camera.global_position = global_position
 	player.direction = starting_direction
 	camera.global_position = global_position
@@ -322,7 +323,7 @@ func _process(delta: float) -> void:
 		label_height = -30
 	id_label_pos.global_position = get_global_transform_with_canvas().origin + (Vector2(0, label_height))
 	player_id_label.visible = CoopManager.coop_enabled and CoopManager.splitscreen == false and CoopManager.players_connected > 1 and CoopManager.active_players.has(player_id) and not out_of_game
-	if GameManager.time <= 0:
+	if GameManager.time <= 0 and not is_god_mode_enabled():
 		time_up()
 	$Sprite/Crown.visible = CoopManager.crown_player == player_id
 	handle_yoshi(delta)
@@ -1009,6 +1010,8 @@ func summon_flash_particle(offset := Vector2.ZERO) -> void:
 	player.add_sibling(node)
 
 func damage() -> void:
+	if is_god_mode_enabled():
+		return
 	if can_hurt == false:
 		return
 	if invincible:
@@ -1048,6 +1051,9 @@ func damage() -> void:
 func die(force := false) -> void:
 	if dead:
 		return
+	if is_god_mode_enabled():
+		recover_from_lethal_hazard()
+		return
 	if can_hurt == false and force == false:
 		return
 	if state_machine.state.name == "NoClip":
@@ -1068,6 +1074,19 @@ func die(force := false) -> void:
 	GameManager.run_states = {}
 	
 	state_machine.transition_to("Dead")
+
+func is_god_mode_enabled() -> bool:
+	return SettingsManager.settings_file.get("god_mode", false)
+
+func recover_from_lethal_hazard() -> void:
+	velocity = Vector2.ZERO
+	var safe_position := spawn_position
+	if is_instance_valid(GameManager.current_level):
+		if GameManager.checkpoint_level == GameManager.current_level.scene_file_path:
+			safe_position = GameManager.checkpoint_position
+	global_position = safe_position
+	camera.reset_smoothing()
+
 @onready var flash_animation_player: AnimationPlayer = $Sprite/Flash
 
 func bubble_respawn() -> void:
