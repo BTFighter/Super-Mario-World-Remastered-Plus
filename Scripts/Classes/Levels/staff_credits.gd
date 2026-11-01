@@ -34,11 +34,126 @@ const BG_COLOURS = [Color("f8e0b0"),
 					Color("98e0e0"),
 					Color("f8e0b0")]
 
+# Used when res://credits.txt can't be opened (plain .txt files are not packed
+# into exported builds unless the preset's non-resource include filter covers them).
+const FALLBACK_CREDITS = """--Super Mario World Remastered Plus
+
+--Created by
+JoeMama
+
+--Mod by
+Boswer
+
+--Sprites
+
+--Mario Luigi Toad Toadette Sprites
+GlacialSiren484
+MauricioN64
+AwesomeZack
+Jamestendo64
+LinkStormZ
+
+--Super Mario Advance 2 Hybrid Luigi Sprites
+Kaching720
+
+--Modern Peach Sprites
+GlacialSiren484
+
+--Modern Bowser Colours
+SilverBolt
+
+--Baby Yoshi Egg Sprites
+KGK64
+
+--Goomba and Goombrat Sprites
+SamButSam
+
+--Overhaul Autumn Colour Palette
+LinkStormZ
+
+--Super Mario World Sprite Rips
+Barack Obama TSR
+
+--Extended Switch Palace Tileset
+fireluigi
+
+--Test Level Tileset + Background
+SuperSledgeBro
+
+--Mario Construct Chain Chomp, Blooper, Angry Sun, Spike
+Smuglutena
+
+--Achievements
+RetroAchievements.com
+
+--Air Twirl, Propeller SFX
+LMPuny
+
+
+--Music (SMWC)
+
+--Overworld Theme Remix
+lu9
+
+--Overworld Autumn Alternative Remix (VLDC Beach)
+Vinci
+
+--Athletic Theme Remix
+HarvettFox96
+
+--Autumn Map Theme Music
+HarvettFox96
+
+--Autumn Yoshis Island Map Remix
+Jimmy
+
+--Autumn Vanilla Dome
+xyz600sp
+
+--Star Road, Illusion Forest, Underground Autumn Remixes
+MakerK6
+
+--Settings Menu
+Fyre150
+
+--SMB1 Map Theme
+MinecraftGamerLR
+Segment1Zone2
+
+
+--Special Thanks
+Dykas Kong
+wye
+neoarc
+hyron
+ItsVorzo
+MakerK6
+Przemo
+Cube
+SMMP Dev Team
+SMWR Beta Testers
+
+And You
+
+
+This game does not act as a substitute for the original Super Mario World.
+
+Super Mario World can be played now on Nintendo Switch Online.
+
+Please dont sue me Nintendo...
+
+Please....
+"""
+
 func spawn() -> void:
 	if SaveManager.current_save == {}:
 		SaveManager.current_save = SaveManager.save_file_template
-	print(DirAccess.get_files_at("res://"))
-	credits = FileAccess.open("res://credits.txt", FileAccess.READ).get_as_text()
+	var credits_file := FileAccess.open("res://credits.txt", FileAccess.READ)
+	if credits_file == null:
+		push_error("Failed to open res://credits.txt (error %s), using built-in credits" % error_string(FileAccess.get_open_error()))
+		credits = FALLBACK_CREDITS
+	else:
+		credits = credits_file.get_as_text()
 	$Yoshi/Peach.texture = peach_textures[SettingsManager.sprite_settings.peach]
 	yoshi.yoshi_animations.play("Move")
 	yoshi.yoshi_animations.speed_scale = 2
